@@ -796,6 +796,12 @@ let () =
     (fun param -> S [A "-unbox-closures-factor"; A param]);
   pflag ["ocaml"; "native"; "compile"] "afl_inst_ratio" ~doc_param:"50"
     (fun param -> S [A "-afl-inst-ratio"; A param]);
+  pflag ["ocaml"; "native"; "compile"] "default_compartment_id"
+    (fun param -> S [A "-default-compartment-id"; A param]);
+  (* pflag ["ocaml"; "native"; "link"] "default_compartment_id" 
+    (fun param -> S [A "-default-compartment-id"; A param]);
+  pflag ["ocaml"; "native"; "pack"] "default_compartment_id"
+    (fun param -> S [A "-default-compartment-id"; A param]); *)
   ()
 
 let camlp4_flags camlp4s =
@@ -882,6 +888,9 @@ flag ["ocaml"; "link"; "profile"; "native"] (A "-p");;
 flag ["ocaml"; "link"; "program"; "custom"; "byte"] (A "-custom");;
 flag ["ocaml"; "link"; "library"; "custom"; "byte"] (A "-custom");;
 flag ["ocaml"; "link"; "toplevel"; "custom"; "byte"] (A "-custom");;
+flag ["ocaml"; "compile"; "function_sections"; "native"] (A "-function-sections");;
+flag ["ocaml"; "link"; "function_sections"; "native"] (A "-function-sections");;
+flag ["ocaml"; "pack"; "function_sections"; "native"] (A "-function-sections");;
 flag ["ocaml"; "compile"; "profile"; "native"] (A "-p");;
 
 flag ["ocamlmklib"; "linkall"] (A "-linkall");;
