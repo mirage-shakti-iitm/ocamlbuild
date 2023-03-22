@@ -731,8 +731,8 @@ let () =
     (fun param -> S [A "-inline"; A param]);
   pflag ["ocaml"; "native"; "compile"] "default_compartment_id"
     (fun param -> S [A "-default-compartment-id"; A param]);
-  pflag ["ocaml"; "native"; "compile"] "setu_cap_path"
-    (fun param -> S [A "-setu-cap-path"; A param]);
+  pflag ["ocaml"; "native"; "compile"] "fides_cap_path"
+    (fun param -> S [A "-fides-cap-path"; A param]);
   pflag ["ocaml"; "compile"] "color" (fun setting -> S[A "-color"; A setting]);
   pflag ["ocaml"; "infer_interface"] "color" (fun setting -> S[A "-color"; A setting]);
   List.iter (fun pp ->
@@ -937,6 +937,9 @@ flag ["ocaml";"compile";"native";"asm"] & S [A "-S"];;
 
 (* AFL instrumentation *)
 flag ["ocaml"; "compile"; "native"; "afl_instrument"] (A "-afl-instrument");;
+
+(* SETU instrumentation *)
+flag ["ocaml"; "compile"; "native"; "no_checkcap"] (A "-no-checkcap");;
 
 (* threads, with or without findlib *)
 flag ["ocaml"; "compile"; "thread"] (A "-thread");;
