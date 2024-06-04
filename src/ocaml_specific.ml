@@ -893,6 +893,9 @@ flag ["ocaml"; "link"; "toplevel"; "custom"; "byte"] (A "-custom");;
 flag ["ocaml"; "compile"; "function_sections"; "native"] (A "-function-sections");;
 flag ["ocaml"; "link"; "function_sections"; "native"] (A "-function-sections");;
 flag ["ocaml"; "pack"; "function_sections"; "native"] (A "-function-sections");;
+flag ["ocaml"; "compile"; "insert_all_checkcap"; "native"] (A "-insert-all-checkcap");;
+flag ["ocaml"; "link"; "insert_all_checkcap"; "native"] (A "-insert-all-checkcap");;
+flag ["ocaml"; "pack"; "insert_all_checkcap"; "native"] (A "-insert-all-checkcap");;
 flag ["ocaml"; "compile"; "profile"; "native"] (A "-p");;
 
 flag ["ocamlmklib"; "linkall"] (A "-linkall");;
